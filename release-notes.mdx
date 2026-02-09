@@ -1,0 +1,199 @@
+---
+title: Release Notes
+description: SlicedHealth Release Notes
+---
+##### **Release - 2.9.0.0**
+
+#####
+
+<Image src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fdiced.slicedhealth.com%2Fmedia%2Fversion%2Ffavoritestar.png&t=1770639876&ymreqid=d5e3ba5b-72ab-e859-1cf9-35000b011300&sig=aqofgJNUcBUX0azS1JWdNw--~D" width="32" height="32" alt="What's New" />
+
+**What's New**
+
+- **Follow-Up Date Quick Filters (Claim Analysis Grid)**
+
+Quick Follow-Up Date filters are now available in the Claim Analysis grid, including Next 1 Day, Next 7 Days, Next 30 Days, and Next 3 Months. Filters are dynamically calculated from the current date. When no filter is applied, all records are displayed.
+
+- **Global Fee Schedules – New View**
+
+A new Global Fee Schedules view is available under the Fee Schedule section. It displays all Global Fee Schedules in read-only mode, supports advanced filtering by State and Region, and shows expanded Global Fee Schedule details within contract rules via dynamic links. Only the required schedule loads to improve performance.
+
+- **Enhanced Contract Copying Across Clients**
+
+Contract copying across clients has been improved for greater accuracy, especially when Global Fee Schedules are involved. Fee Schedule names are auto-filled and validated for uniqueness at the target client. Global and Local Fee Schedules are clearly separated and displayed only when relevant. The action label has been updated to "Select Fee Schedule At Target" for clarity. Users can quickly reuse the same Fee Schedule name and are prompted to review GPCI or State Locality values when Global RBRVS schedules are applied. These enhancements reduce configuration errors and streamline cross-client setup.
+
+- **Anesthesia Calculation Enhancements**
+
+Anesthesia rules now support claims where Units are submitted as Minutes. A rule-level toggle allows selection between Units and Minutes, with a configurable conversion factor while preserving existing behavior when Units are selected.
+
+- **Administration – User Audit Fields**
+
+The Users page now includes additional audit columns: Created By and Created On. Both fields support sorting to improve administrative visibility and tracking.
+
+- **Date-Range Based Payment Methodology (Pay Source Charge)**
+
+Rules now support multiple date ranges within a single configuration. Each range can define its own payment methodology and custom rate, with automatic rate selection based on service date. This behavior is controlled by a toggle, which is disabled by default.
+
+- **Enhanced Lesser-Of Logic**
+
+Lesser-Of calculations now support rate labels, Global Fee Schedules, and GPCI adjustments. The Fee Schedule used for payment can differ from the schedule used for lesser-of comparison, enabling more advanced pricing logic.
+
+- **Confidence Score Improvements**
+
+Confidence scoring logic has been refined for improved accuracy and transparency. Scores start at 100%, are reduced only by defined negative events, are capped between 0% and 100%, and remain at 100% when variance is zero or within the configured threshold.
+
+- **AI-Powered Claim Search**
+
+Users can search claims using plain English queries such as "Show me all denied claims of outpatient visit type" and receive precise results without building complex filters, significantly reducing search time.
+
+- **Redesigned Chat Interface**
+
+The chat interface has been modernized with a cleaner design, real-time streaming responses, and full responsiveness across devices to enhance usability and performance.
+
+- **Smart Response Controls**
+
+New response controls include a Stop button to halt responses anytime, a Retry option for manual reprocessing, and automatic error recovery to ensure smooth and uninterrupted usage.
+
+##### **Release - 2.8.0.0**
+
+#####
+
+<Image src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fdiced.slicedhealth.com%2Fmedia%2Fversion%2Ffavoritestar.png&t=1770639876&ymreqid=d5e3ba5b-72ab-e859-1cf9-35000b011300&sig=aqofgJNUcBUX0azS1JWdNw--~D" width="32" height="32" alt="What's New" />
+
+**What's New**
+
+- **Notification Subscriptions**
+
+Introduces a notification subscription framework that allows users to receive proactive alerts for key expiration events including Contracts, Fee Schedules, and Rules. Users can manage their own subscriptions and choose in-app or email delivery. In this release, notifications are focused on expiration-related events with reminders sent 30 days, 10 days, and 1 day before expiration.
+
+- **Read-Only Access for Claim Analysis**
+
+Allows users with Claim Analysis access to view contracts in a read-only mode without requiring full Contract Management permissions. This provides visibility for analysts while restricting contract modification to authorized users.
+
+- **CCN Tracking in Claim Analysis Trace Logs**
+
+Adds CMS Certification Numbers (CCN) to Claim Analysis trace logs. Including CCN improves the ability to track claims through the system and quickly locate processing or configuration issues.
+
+- **Base Rate Option in Per Unit Calculation**
+
+Enhances the Per Unit reimbursement calculation with a Base Rate option. Supports percentage-based or per-unit pricing with an additional fixed base amount and allows a one-time base rate per claim line. Existing contracts remain unaffected unless the Base Rate option is enabled.
+
+- **Smarter Claims with Supplementary Knowledge (Claims SlicedIQ)**
+
+Enables contract-specific supplementary knowledge to be attached to Claims SlicedIQ. Users can add, update, or remove guidance documents that are automatically applied during claim analysis so results reflect contract terms, internal guidance, and policy interpretation. Upload and processing status is clearly displayed.
+
+- **Persistent Upload and Enhanced Upload Modal (Contract SlicedIQ)**
+
+Provides a persistent Upload icon and unified modal for managing Contract SlicedIQ documents. Users can upload multiple files continuously, monitor real-time upload and processing status, and manage documents without leaving the screen or refreshing the page, resulting in faster and smoother workflows.
+
+##### **Release - 2.7.0.0**
+
+#####
+
+<Image src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fdiced.slicedhealth.com%2Fmedia%2Fversion%2Ffavoritestar.png&t=1770639876&ymreqid=d5e3ba5b-72ab-e859-1cf9-35000b011300&sig=aqofgJNUcBUX0azS1JWdNw--~D" width="32" height="32" alt="What's New" />
+
+**What's New**
+
+- **Rules Page Update – Support for Global Fee Schedules**
+
+You can now select Global Fee Schedules when creating or editing a rule. A new toggle lets you switch between Local and Global FS options. If the selected Global FS requires metadata such as State, Locality, or GPCI, the system prompts you to enter those fields. The backend now automatically uses the correct effective dates and locality values when analyzing claims.
+
+- **New Rule Logic – Per Diem with Medicare ALOS**
+
+A new rule type now supports Per Diem calculations using Medicare ALOS. When Stop Loss is selected and the ALOS toggle is enabled, the system applies ALOS-based logic. DRG rules pull ALOS values from the DRG table, while non-DRG rules allow manual ALOS entry. Threshold logic remains unchanged, and Stop Loss appears as a separate line in claim details. ALOS values are maintained in decimal format.
+
+- **Code Selection and Payment Method Improvements**
+
+Payment Method now includes its own Fee Schedule dropdown, allowing selection of a different Fee Schedule for payment if required. If left blank, the system defaults to the Fee Schedule selected in Code Selection. Hyperlink support has been added to the Fee Schedule search. Code Selection modes continue to function the same, and rule matching still depends on Code Selection.
+
+- **Contract Modeling – Charge-Level Filters**
+
+Contract Modeling now supports filtering based on charge-level values such as revenue codes, CPT ranges, and other claim attributes. This mirrors the behavior of the Claim Analysis Search screen, excluding remit filters. Users can search for scenarios such as ER claims using Rev 450 or CPT ranges like 70010–79999.
+
+- **Cleaner Trace View Data**
+
+Trace View data within Claim Details has been simplified and reorganized to improve clarity during workflows. Consolidated charge analysis and payment selection details are now displayed directly within the Trace View, allowing users to review and act on information in one place.
+
+- **Export Added to Claim Payers & Remit Payers**
+
+The Claim Payers and Remit Payers screens now include an Export option. Users can export both the currently visible columns and the filtered dataset.
+
+- **Export for Modeled Contracts & Claims**
+
+Users can now export both aggregated claim-level results and detailed service-level results for modeled contracts and claims.
+
+- **New Charge Analysis Screen**
+
+A new Charge Analysis menu item has been added. The screen includes three new sortable and filterable columns: Payer Name, Contract, and Allowable.
+
+- **PAYERID Mapping Improvements**
+
+The Claim Payer screen now includes the PAYERID field in both the grid and advanced filters. This field is also used during contract mapping in Claim Analysis. Additionally, the supported Payer Code length has been increased to 50 characters.
+
+- **More Reliable AI Assistance**
+
+AI guardrails have been enhanced to deliver more accurate, consistent, and dependable responses across workflows, providing a more reliable user experience.
+
+- **Better Contract Insights with Follow-Up Questions**
+
+Contract insights are now presented in clearer, structured numerical tables. The system also provides follow-up questions to guide users through deeper and more effective analysis.
+
+##### **Release - 2.6.0.0**
+
+#####
+
+<Image src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fdiced.slicedhealth.com%2Fmedia%2Fversion%2Ffavoritestar.png&t=1770639876&ymreqid=d5e3ba5b-72ab-e859-1cf9-35000b011300&sig=aqofgJNUcBUX0azS1JWdNw--~D" width="32" height="32" alt="What's New" />
+
+**What's New**
+
+- **Grid and Dashboard Improvements**
+
+Sorting capabilities have been added across previously non-sortable grids, enabling more efficient data organization and review. Summary Dashboard widgets now support sorting as well, allowing faster and more customized analysis directly within the dashboard.
+
+- **Payer and Claim Enhancements**
+
+Payer ID Mapping via File Upload allows users to upload a mapping file (Payer Name, Payer ID, Contract, Active Flag), removing the need for manual payer mapping. Claim Details Export now includes unmatched remit lines for complete claim data. A new Claim Analysis Statistics page under Administration ? Statistics provides Daily, Weekly, and Monthly views of distinct claims analyzed over time, with graphical trends similar to the Files Chart.
+
+- **Credits for AI – New Tab & AI Experience Enhancements**
+
+A new “Credits for AI” tab improves visibility into AI-related usage and transaction details with expanded and standardized fields. Contract chatbots now include Reasoning Mode for interpreting complex clauses, Quick Response Mode for instant fact retrieval, and Auto Mode for seamless switching between modes. A Chat Usage Bar provides real-time visibility into chat usage, limits, and remaining balance for contract and claim analysis.
+
+##### **Release - 2.5.0.0**
+
+#####
+
+<Image src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fdiced.slicedhealth.com%2Fmedia%2Fversion%2Ffavoritestar.png&t=1770639876&ymreqid=d5e3ba5b-72ab-e859-1cf9-35000b011300&sig=aqofgJNUcBUX0azS1JWdNw--~D" width="32" height="32" alt="What's New" />
+
+**What's New**
+
+- **Automated Claim Status Updates**
+
+Remits received for claims already assigned to Sliced now automatically move those claims to Recovery Review, reducing manual effort and accelerating recovery workflows.
+
+- **Improved Address Management**
+
+Client and Facility address fields have been expanded and standardized for more complete reporting. Facility addresses can be auto-filled from the client's address to speed setup.
+
+- **Contract Documents – Uploaded By Tracking**
+
+Each uploaded contract document now records and displays the user who uploaded it; all upload actions are logged to provide a clear audit trail and accountability.
+
+- **Lesser Of Claims Filter**
+
+New Contract Modeling filter identifies claims paid under lesser-of rules where payment is capped by billed charges, making it easier to detect reimbursement limits caused by pricing.
+
+- **Facility Page Enhancements**
+
+Billing NPI and Provider CCN are now shown in a structured table on the facility page to improve visibility, review, and updates.
+
+- **EAPG Is Live**
+
+EAPG functionality is now active with a dedicated settings page for configuration and testing. Implementation and initial setup are handled by the support team per client.
+
+- **Rule Processing Enhancement**
+
+Claim processing logic updated so rules are applied before PPS calculations, ensuring more accurate and consistent claim results.
+
+- **SlicedIQ AI Enhancements**
+
+SlicedIQ now provides automatic contract summaries at upload, improved claim analysis with clearer navigation and insights, and backend performance optimizations for better responsiveness under load.
