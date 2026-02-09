@@ -1,0 +1,123 @@
+---
+title: Changelog
+description: Track the latest updates, new features, and improvements in SlicedHealth to stay informed on platform enhancements.
+---
+
+## Changelog Overview
+
+<Callout kind="info" title="Stay Informed">
+Subscribe to changelog notifications via your account settings or RSS feed to receive instant updates on new releases, features, and fixes that impact SlicedHealth's revenue management tools.
+</Callout>
+
+Track all SlicedHealth platform changes here. We release updates frequently to enhance SlicedIQ AI modeling, contract variance analysis, business intelligence dashboards, price transparency reporting, and claim estimation capabilities. Review breaking changes carefully before upgrading.
+
+<Columns cols={3}>
+  <Card title="Latest Release" icon="zap" href="#v1-3-0">
+    v1.3.0 - Enhanced AI predictions and real-time dashboards.
+  </Card>
+  <Card title="Upgrade Guide" icon="settings" href="#upgrade-process">
+    Follow these steps to deploy the latest version seamlessly.
+  </Card>
+  <Card title="Full History" icon="book-open" href="#full-history">
+    View all past releases and detailed notes.
+  </Card>
+</Columns>
+
+## Recent Releases
+
+<Update label="2025-01-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added advanced SlicedIQ AI modeling for predictive underpayment detection with 95% accuracy.
+- Introduced real-time contract variance alerts in the dashboard.
+
+## Improvements
+
+- Optimized business intelligence queries for `<50ms` response times.
+- Enhanced price transparency reports with export to PDF and CSV.
+
+## Bug Fixes
+
+- Fixed claim estimation discrepancies in multi-payer scenarios.
+- Resolved dashboard refresh issues on mobile devices.
+
+</Update>
+
+<Update label="2024-12-10" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Launched interactive claim estimation simulator for upfront payment forecasting.
+- Integrated partner APIs for seamless data ingestion.
+
+## Improvements
+
+- Upgraded variance analysis engine to process 10x more claims per hour.
+
+## Bug Fixes
+
+- Corrected denial reason categorization errors.
+- Patched authentication token refresh in long sessions.
+
+</Update>
+
+<Update label="2024-11-05" description="v1.1.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Deprecated legacy CSV upload endpoint; migrate to `/api/v2/uploads`.
+- Updated default API rate limit to `1000` requests per hour.
+
+## New Features
+
+- Rollout of price transparency compliance dashboard meeting executive order requirements.
+- Added team collaboration features for shared variance reports.
+
+## Bug Fixes
+
+- Fixed export failures for large business intelligence datasets.
+
+</Update>
+
+## Upgrade Process
+
+Follow these steps to upgrade your SlicedHealth instance safely.
+
+<Steps>
+  <Step title="Backup Data" icon="database">
+    Export your current configurations and datasets.
+
+    ```
+    curl -H "Authorization: Bearer YOUR_TOKEN" \
+         https://api.example.com/v1/export \
+         -o backup.json
+    ```
+  </Step>
+  <Step title="Review Changes" icon="book-open">
+    Check the breaking changes section above and update your integrations.
+  </Step>
+  <Step title="Deploy Update" icon="rocket">
+    Use your deployment tool to apply the new version.
+  </Step>
+  <Step title="Verify" icon="check-circle">
+    Test key features like SlicedIQ predictions and variance analysis.
+  </Step>
+</Steps>
+
+<Callout kind="tip" title="Pro Tip">
+Test upgrades in a staging environment first to avoid disruptions to production revenue workflows.
+</Callout>
+
+## Full Release History
+
+<Expandable title="Older Releases" default-open="false">
+
+| Version | Date       | Key Changes                  |
+|---------|------------|------------------------------|
+| v1.0.0 | 2024-10-01 | Initial SlicedIQ launch     |
+| v0.9.0 | 2024-09-15 | Beta variance analysis      |
+
+For complete details, contact support@slicedhealth.com.
+
+</Expandable>

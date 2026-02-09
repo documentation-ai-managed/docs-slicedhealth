@@ -1,0 +1,122 @@
+---
+title: Introduction to SlicedHealth
+description: Discover SlicedHealth, a SaaS platform designed for healthcare revenue management, featuring AI-driven insights, variance analysis, and compliance tools to help providers capture every earned dollar.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+SlicedHealth empowers healthcare providers with advanced revenue management tools. You uncover hidden underpayments, analyze contract variances in real-time, and ensure compliance through AI-driven insights. Key solutions include SlicedIQ for intelligent analysis, variance tracking, business intelligence dashboards, price transparency reporting, and claim estimation for upfront payments.
+
+Targeted at hospitals and specialty practices, SlicedHealth helps you capture every earned dollar by providing actionable data and automation.
+
+<Image
+  src="https://slicedhealth.com/wp-content/uploads/2025/12/SlicedIQ-150x150.png"
+  alt="SlicedIQ AI Modeling and Analysis"
+  width="150"
+  height="150"
+/>
+
+## Key Solutions
+
+Explore SlicedHealth's core offerings designed to optimize your revenue cycle.
+
+<Columns cols={3}>
+  <Card title="SlicedIQ" icon="zap" href="/solutions/slicediq">
+    AI-powered intelligence engine for smarter revenue management and predictive analytics.
+  </Card>
+  <Card title="Variance Analysis" icon="bar-chart" href="/solutions/variance-analysis">
+    Detect contract underpayments and denials in real-time with automated reporting.
+  </Card>
+  <Card title="Business Intelligence" icon="trending-up" href="/solutions/business-intelligence">
+    Real-time dashboards and analytics to track performance across your organization.
+  </Card>
+  <Card title="Price Transparency" icon="shield" href="/solutions/price-transparency">
+    Ensure compliance with executive orders using standardized pricing tools.
+  </Card>
+  <Card title="Claim Estimation" icon="dollar-sign" href="/solutions/claim-estimation">
+    Enable upfront payments with accurate claim value predictions.
+  </Card>
+</Columns>
+
+## Who Uses SlicedHealth
+
+SlicedHealth serves various healthcare providers with tailored use cases.
+
+<Tabs>
+  <Tab title="Hospitals" icon="building">
+    Large hospitals use SlicedHealth to manage high-volume claims, reduce denials by 30%, and integrate with existing EHR systems for seamless revenue recovery.
+  </Tab>
+  <Tab title="Specialty Practices" icon="users">
+    Specialty groups leverage variance analysis and claim estimation to handle complex contracts and maximize reimbursements from payers.
+  </Tab>
+</Tabs>
+
+## Quick Start
+
+Get up and running with SlicedHealth in minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Visit the client login portal and sign up with your organization details.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for verification and activate your account.
+  </Step>
+  <Step title="Access Dashboard" icon="layout-dashboard">
+    Log in at `https://dashboard.slicedhealth.com` and explore your revenue insights.
+  </Step>
+  <Step title="Connect Data" icon="database">
+    Upload your first claims data or connect via API for real-time analysis.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="cURL,JavaScript">
+  ```bash
+  curl -X POST https://api.slicedhealth.com/v1/auth/login \
+    -H "Content-Type: application/json" \
+    -d '{"email": "user@example.com", "password": "YOUR_PASSWORD"}'
+  ```
+  ```javascript
+  const response = await fetch('https://api.slicedhealth.com/v1/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: 'user@example.com',
+      password: 'YOUR_PASSWORD'
+    })
+  });
+  const data = await response.json();
+  ```
+</CodeGroup>
+
+## Navigation Guide
+
+<ExpandableGroup>
+  <Expandable title="Core Documentation" default-open="true">
+    Start with [Quickstart](/quickstart) for setup, then explore [Authentication](/authentication) for secure access.
+  </Expandable>
+  <Expandable title="Solutions Deep Dive">
+    Detailed guides for SlicedIQ, variance analysis, and more under the Solutions section.
+  </Expandable>
+  <Expandable title="Support Resources">
+    Check the [Changelog](/changelog) for updates and contact support via the dashboard.
+  </Expandable>
+</ExpandableGroup>
+
+## Next Steps
+
+<Card title="Quickstart Guide" icon="book-open" href="/quickstart">
+  Dive into your first revenue analysis.
+</Card>
+
+<Card title="Authentication" icon="lock" href="/authentication">
+  Set up secure API access.
+</Card>
+
+<Callout kind="tip">
+  Begin with the Quickstart to analyze your first dataset and unlock immediate value.
+</Callout>
